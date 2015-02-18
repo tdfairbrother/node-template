@@ -5,6 +5,7 @@
   "main": "lib/main/index.js",
   "scripts": {
     "start": "make start",
+    "repl": "make repl",
     "test": "make test-coveralls",
     "debug": "make debug",
     "debug-test": "make debug-test",

@@ -17,6 +17,9 @@ debug:
 start:
 	@NODE_ENV=development DEBUG=$(DEBUG) node lib/${MAIN}/index.js
 
+repl:
+	@NODE_ENV=development DEBUG=$(DEBUG) node lib/repl/index.js
+
 watch:
 	@NODE_ENV=development  DEBUG=$(DEBUG) ./node_modules/.bin/supervisor -w . lib/${MAIN}/index.js
 
