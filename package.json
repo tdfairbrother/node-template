@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/main/index.js",
   "scripts": {
-    "start": "node lib/main/index.js",
+    "start": "make start",
     "test": "make test-coveralls",
     "debug": "make debug",
     "debug-test": "make debug-test",
@@ -21,6 +21,7 @@
     "supervisor": "^0.6.0"
   },
   "dependencies": {
-    "architect": "^0.1.11"
+    "architect": "^0.1.11",
+    "debug": "^2.1.1"
   }
 }
