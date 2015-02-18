@@ -5,7 +5,7 @@
     "private": true,
     "plugin": {
         "consumes": [
-            "error_handler"
+            "error_handler", "log"
         ],
         "provides": ["app", "server"]
     }

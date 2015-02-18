@@ -4,7 +4,7 @@
     "main": "index.js",
     "private": true,
     "plugin": {
-        "consumes": [],
+        "consumes": ["log"],
         "provides": [
             "error_handler"
         ]

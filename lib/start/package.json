@@ -5,7 +5,7 @@
     "private": true,
     "plugin": {
         "consumes": [
-            "server"
+            "server", "log"
         ],
         "provides": []
     }
