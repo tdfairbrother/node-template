@@ -16,7 +16,7 @@ server.listen(port, function() {
         if (err) {
             throw err;
         }
-        app.services.log.info('repl-server ready on port ' + port);
+        app.services.log('repl-server').info('ready on port %s', port);
         appInstance = app;
     });
 });
