@@ -5,7 +5,8 @@
   "main": "lib/main/index.js",
   "scripts": {
     "start": "make start",
-    "repl": "make repl",
+    "console": "make console",
+    "repl-server": "make repl-server",
     "test": "make test-coveralls",
     "debug": "make debug",
     "debug-test": "make debug-test",
@@ -19,13 +20,15 @@
     "longjohn": "^0.2.4",
     "mocha": "^2.0.1",
     "sinon": "^1.11.1",
-    "supervisor": "^0.6.0"
+    "supervisor": "^0.6.0",
+    "proxyquire": "^1.3.1"
   },
   "dependencies": {
     "airbrake": "^0.3.8",
     "architect": "^0.1.11",
     "debug": "^2.1.1",
     "express": "^4.11.2",
+    "lodash": "^3.2.0",
     "morgan": "^1.5.1"
   }
 }
