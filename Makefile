@@ -1,7 +1,8 @@
 LIB?=*
 MAIN?=main
-DEBUG?=node-template*
+DEBUG?=node-*
 DEBUG_TEST?=''
+NODE_ENV?=development
 
 test:
 	@NODE_ENV=test DEBUG=$(DEBUG_TEST) ./node_modules/.bin/mocha lib/$(LIB)/test/*.js -R spec -t 30000
@@ -16,18 +17,18 @@ debug-test:
 	@NODE_ENV=test DEBUG=$(DEBUG) ./node_modules/.bin/mocha lib/$(LIB)/test/*.js -R spec -t 30000 --debug-brk
 
 debug:
-	@NODE_ENV=development DEBUG=$(DEBUG) node --debug-brk lib/${MAIN}/index.js
+	@NODE_ENV=$(NODE_ENV) DEBUG=$(DEBUG) node --debug-brk lib/${MAIN}/index.js
 
 start:
-	@NODE_ENV=development DEBUG=$(DEBUG) node lib/${MAIN}/index.js
+	@NODE_ENV=$(NODE_ENV) DEBUG=$(DEBUG) node lib/${MAIN}/index.js
 
 console:
-	@NODE_ENV=development DEBUG=$(DEBUG) node repl/console.js
+	@NODE_ENV=$(NODE_ENV) DEBUG=$(DEBUG) node repl/console.js
 
 repl-server:
-	@NODE_ENV=development DEBUG=$(DEBUG) node repl/server.js
+	@NODE_ENV=$(NODE_ENV) DEBUG=$(DEBUG) node repl/server.js
 
 watch:
-	@NODE_ENV=development  DEBUG=$(DEBUG) ./node_modules/.bin/supervisor -w . lib/${MAIN}/index.js
+	@NODE_ENV=$(NODE_ENV)  DEBUG=$(DEBUG) ./node_modules/.bin/supervisor -w . lib/${MAIN}/index.js
 
 .PHONY: test

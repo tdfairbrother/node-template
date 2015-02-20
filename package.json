@@ -26,10 +26,9 @@
   "dependencies": {
     "airbrake": "^0.3.8",
     "architect": "^0.1.11",
-    "chalk": "^0.5.1",
-    "debug": "^2.1.1",
     "express": "^4.11.2",
     "lodash": "^3.2.0",
-    "morgan": "^1.5.1"
+    "morgan": "^1.5.1",
+    "node-architect-log": "0.0.1"
   }
 }
