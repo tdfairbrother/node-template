@@ -11,7 +11,10 @@ test-watch:
 	@NODE_ENV=test DEBUG=$(DEBUG_TEST) ./node_modules/.bin/mocha lib/$(LIB)/test/*.js -R spec -w . -t 30000
 
 test-coveralls:
-	@NODE_ENV=test DEBUG=$(DEBUG_TEST) ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha lib/*/test/*.js -x "**/spec_helpers/**" --report lcovonly -- -R spec -t 30000
+		@NODE_ENV=test DEBUG=$(DEBUG_TEST) ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha lib/$(LIB)/test/*.js -x "**/spec_helpers/**" --report lcovonly -- -R spec -t 30000
+
+test-html-coverage:
+	@NODE_ENV=test DEBUG=$(DEBUG_TEST) ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha lib/$(LIB)/test/*.js -x "**/spec_helpers/**" --report html -- -R spec -t 30000
 
 debug-test:
 	@NODE_ENV=test DEBUG=$(DEBUG) ./node_modules/.bin/mocha lib/$(LIB)/test/*.js -R spec -t 30000 --debug-brk
