@@ -1,3 +1,8 @@
+[![Build Status](https://semaphoreapp.com/api/v1/projects/4e50bd69-64e7-425d-ab37-b5dff542cc4a/359596/badge.png)](https://semaphoreapp.com/tdfairbrother/node-template)
+
+[![Coverage Status](https://coveralls.io/repos/tdfairbrother/node-template/badge.svg?branch=develop)](https://coveralls.io/r/tdfairbrother/node-template?branch=develop)
+
+
 Node Template
 ====================
 
